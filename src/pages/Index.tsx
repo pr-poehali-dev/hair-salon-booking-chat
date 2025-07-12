@@ -37,25 +37,81 @@ const Index = () => {
 
   const services = [
     {
-      id: "haircut",
+      id: "haircut-men",
       name: "Мужская стрижка",
       price: "1500 ₽",
       duration: "60 мин",
       icon: "Scissors",
     },
     {
-      id: "coloring",
-      name: "Окрашивание",
-      price: "4500 ₽",
+      id: "haircut-senior",
+      name: "Стрижка пенсионеров",
+      price: "1500 ₽",
+      duration: "60 мин",
+      icon: "Users",
+    },
+    {
+      id: "haircut-women",
+      name: "Женская стрижка",
+      price: "2000-2500 ₽",
+      duration: "60 мин",
+      icon: "Scissors",
+    },
+    {
+      id: "haircut-long",
+      name: "Стрижка длинные волосы",
+      price: "2500-3000 ₽",
+      duration: "90 мин",
+      icon: "Scissors",
+    },
+    {
+      id: "coloring-roots",
+      name: "Окрашивание корней",
+      price: "2000-2500 ₽*",
+      duration: "120 мин",
+      icon: "Palette",
+    },
+    {
+      id: "coloring-short",
+      name: "Окрашивание короткие волосы",
+      price: "2500 ₽*",
+      duration: "120 мин",
+      icon: "Palette",
+    },
+    {
+      id: "coloring-medium",
+      name: "Окрашивание средняя длина",
+      price: "2500-3000 ₽*",
+      duration: "150 мин",
+      icon: "Palette",
+    },
+    {
+      id: "coloring-long",
+      name: "Окрашивание длинные волосы",
+      price: "3000-5000 ₽*",
       duration: "180 мин",
       icon: "Palette",
     },
     {
-      id: "styling",
-      name: "Укладка",
-      price: "1500 ₽",
-      duration: "45 мин",
-      icon: "Wind",
+      id: "perm",
+      name: "Химзавивка",
+      price: "8000-15000 ₽",
+      duration: "240 мин",
+      icon: "RotateCcw",
+    },
+    {
+      id: "bangs",
+      name: "Стрижка челки",
+      price: "500 ₽",
+      duration: "30 мин",
+      icon: "Scissors",
+    },
+    {
+      id: "rich-bangs",
+      name: "Техника богатая челка",
+      price: "5000 ₽",
+      duration: "90 мин",
+      icon: "Sparkles",
     },
   ];
 
@@ -221,6 +277,14 @@ const Index = () => {
                       />
                     </div>
                   </div>
+                  <div className="text-sm text-muted-foreground mt-4 p-3 bg-gray-50 rounded-lg">
+                    <p className="font-semibold">Примечание:</p>
+                    <p>
+                      * Цены на окрашивание указаны без учета стоимости
+                      материалов
+                    </p>
+                    <p>* Стоимость материала: 40 ₽ за грамм</p>
+                  </div>
                   <Button
                     onClick={handleBooking}
                     className="w-full mt-6"
@@ -296,6 +360,26 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+          <div className="mt-12 max-w-2xl mx-auto">
+            <div className="bg-gray-50 p-6 rounded-lg text-center">
+              <h4 className="font-rubik font-semibold text-lg mb-3 text-primary">
+                Важная информация
+              </h4>
+              <div className="text-muted-foreground space-y-2">
+                <p>
+                  * Цены на окрашивание указаны без учета стоимости материалов
+                </p>
+                <p>
+                  * Стоимость материала:{" "}
+                  <span className="font-semibold">40 ₽ за грамм</span>
+                </p>
+                <p>
+                  * Точную стоимость материалов мастер рассчитает при
+                  консультации
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
