@@ -38,8 +38,8 @@ const Index = () => {
   const services = [
     {
       id: "haircut",
-      name: "Стрижка",
-      price: "2000 ₽",
+      name: "Мужская стрижка",
+      price: "1500 ₽",
       duration: "60 мин",
       icon: "Scissors",
     },
